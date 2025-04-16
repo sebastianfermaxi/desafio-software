@@ -1,0 +1,22 @@
+<p class="title"> Prueba técnica Foca Software</p>
+
+<div class="spinner" *ngIf="loading"></div>
+
+<div class="paginator" *ngIf="!loading">
+    <button class="button-sm" (click)="changePage(page-1)" [disabled]="page === 1">Prev</button>
+    <p>Page {{page}}</p>
+    <button class="button-sm" (click)="changePage(page+1)" [disabled]="page * postsPerPage >= posts.length " >Next</button>
+</div>
+
+<div class="container" *ngIf="!loading">
+    <div *ngFor="let post of paginatedPosts" class="card">
+
+        <div data-testid="post-title" >
+            {{post.title}}
+        </div>
+        <div style="display:flex; justify-content: center;">
+            <button (click)="goPostDetail(post.id) ">Ver</button>
+        </div>
+
+    </div>
+</div>

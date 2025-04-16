@@ -1,0 +1,12 @@
+.paginator{
+    display: flex;
+    justify-content: center;
+}
+
+.button-sm{
+    background: lightblue;
+    margin: 8px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}

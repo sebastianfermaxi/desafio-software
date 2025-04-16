@@ -1,0 +1,14 @@
+<p class="title"> Detalles</p>
+
+<button> <a href="/">Volver</a> </button>
+
+<div class="spinner" *ngIf="loading"></div>
+
+<div class="container" *ngIf="!loading">
+    <div class="card">
+        <div>
+            <h3> {{postDetails.title}}</h3>
+            <p> {{postDetails.body}}</p>
+        </div>
+    </div>
+</div>
